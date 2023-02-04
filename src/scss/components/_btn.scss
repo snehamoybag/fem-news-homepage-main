@@ -1,0 +1,39 @@
+.btn {
+
+  &__hamburger {
+    background-color: transparent;
+    border: none;
+    position: relative;
+    width: 2.25em;
+    height: 1em;
+    padding: 0;
+
+    &-lines {
+      display: block;
+    }
+
+    &-lines,
+    &-lines::before,
+    &-lines::after {
+      height: 0.175em;
+      background-color: var(--clr-neutral-900);
+    }
+
+    &-lines::before,
+    &-lines::after {
+      content: '';
+      width: 100%;
+      position: absolute;
+      left: 0;
+      z-index: 99;
+    }
+
+    &-lines::before {
+      top: 0;
+    }
+
+    &-lines::after {
+      bottom: 0;
+    }
+  }
+}

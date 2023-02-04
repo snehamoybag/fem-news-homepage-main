@@ -11,16 +11,16 @@
 </head>
 <body>
   <header class="header">
-    <div class="container">
+    <div class="container flex flex--space-between flex--align-center">
       <a href="http://localhost:5173/">
         <img class="header__logo" src="/assets/images/logo.svg" alt="Site Logo">
       </a>
-      <button class="btn__hamburger" aria-controls="primary-nav" aria-expanded="false">
+      <button class="btn btn__hamburger" aria-controls="primary-nav" aria-expanded="false">
         <span class="sr-only">Menu</span>
         <span class="btn__hamburger-lines"></span>
       </button>
       <nav class="header__nav" id="primary-nav" aria-label="Primary Navigation">
-        <ul>
+        <ul class="header__nav-links">
           <li><a href="#">Home</a></li>
           <li><a href="#">New</a></li>
           <li><a href="#">Popular</a></li>
@@ -32,7 +32,7 @@
   </header>
 
   <main class="main">
-    <div class="container">
+    <div class="container grid grid--triple-col">
       <section class="featured">
         <article class="featured__article">
           <picture class="featured__cover-img" aria-label="Article Cover">

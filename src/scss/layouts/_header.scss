@@ -1,0 +1,32 @@
+.header {
+  --padd-block: 2em;
+  padding-top: var(--padd-block);
+  padding-bottom: var(--padd-block);
+
+  &__logo {
+    width: clamp(1rem, 12vw, 50rem);
+  }
+
+  &__nav {
+    display: none;
+  }
+
+  &__nav-links {
+    list-style: none;
+
+    a {
+      color: inherit; // inherits from body font color
+      text-decoration: none;
+    }
+
+    a:hover,
+    a:focus {
+      color: var(--clr-accent-400);
+    }
+
+    a:focus-visible {
+      outline: 1px solid currentColor;
+      outline-offset: 0.25em;
+    }
+  }
+}
