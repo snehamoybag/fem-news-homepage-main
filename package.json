@@ -2,11 +2,16 @@
   "name": "news-homepage-main",
   "version": "1.0.0",
   "description": "![Design preview for the News homepage coding challenge](./design/desktop-preview.jpg)",
-  "main": "index.js",
+  "main": "src/js/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite src",
+    "build": "rm -rf dist && vite build src",
+    "deploy": "npm run build && gh-pages -d dist"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "vite": "^4.0.3"
+  }
 }
