@@ -1,0 +1,13 @@
+// Breakpoints 640px, 960px, 1440px, 1920
+$breakpoints-up: (
+  "small" : 40em,
+  "medium" : 60em,
+  "large": 90em,
+  "xlarge": 120em
+);
+
+@mixin minWidth($size) {
+  @media (min-width: map-get($breakpoints-up, $size)) {
+    @content;
+  }
+}

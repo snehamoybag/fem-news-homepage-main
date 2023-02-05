@@ -1,0 +1,23 @@
+.featured {
+  --content-spacing: 1rem;
+
+  &__cover-img {
+    margin-bottom: var(--content-spacing);
+  }
+
+  &__title {
+    font-size: var(--fs-900);
+    font-weight: var(--fw-extra-bold);
+    color: var(--clr-neutral-900);
+    line-height: 1;
+    margin-bottom: var(--content-spacing);
+  }
+
+  &__description {
+    margin-bottom: calc(var(--content-spacing) + 0.5rem);
+  }
+
+  .btn {
+    display: inline-block;
+  }
+}

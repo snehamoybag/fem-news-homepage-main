@@ -1,0 +1,8 @@
+.main {
+  --content-spacing: 4rem;
+  margin-bottom: var(--content-spacing);
+
+  & > .grid {
+    gap: var(--content-spacing);
+  }
+}

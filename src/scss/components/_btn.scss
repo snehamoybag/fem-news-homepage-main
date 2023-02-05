@@ -36,4 +36,30 @@
       bottom: 0;
     }
   }
+
+  &__read-more {
+    background-color: var(--clr-accent-400);
+    color: var(--clr-neutral-200);
+    padding: 0.875em 2.25em;
+    font-weight: var(--fw-bold);
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.25em;
+    transition: background-color 200ms ease-in;
+
+    &:hover,
+    &:focus {
+      cursor: pointer;
+      background-color: var(--clr-neutral-900);
+    }
+
+    &:focus-visible {
+      outline: 1px solid var(--clr-neutral-900);
+      outline-offset: 0.25em;
+    }
+
+    &:active {
+      transform: scale(0.95);
+    }
+  }
 }

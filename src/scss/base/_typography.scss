@@ -1,12 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+
 :root {
   --ff-primary: 'Inter', sans-serif;
 
   --fw-regular: 400;
-  --fw-semi-bold: 700;
-  --fw-bold: 800;
+  --fw-bold: 700;
+  --fw-extra-bold: 800;
+
+  --fs-400: 0.9rem;
+  --fs-500: 1.1rem;
+  --fs-600: 1.2rem;
+  --fs-700: 1.75rem;
+  --fs-900: 2.4rem;
 }
 
 body {
   font-family: var(--ff-primary);
+  font-size: var(--fs-400);
   font-weight: var(--fw-regular);
 }
