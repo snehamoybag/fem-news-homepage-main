@@ -2,14 +2,14 @@
 
 .main {
   --row-spacing: 4rem;
-  --col-spacing: 2.5rem;
   margin-bottom: var(--row-spacing);
+  @include brk.minWidth(medium) {
+    --col-spacing: 2rem;
+    --row-spacing: 4.5rem;
+  }
 }
 
 .main > .grid {
   grid-row-gap: var(--row-spacing);
-
-  @include brk.minWidth(medium) {
-    grid-column-gap: var(--col-spacing);
-  }
+  grid-column-gap: var(--col-spacing);
 }

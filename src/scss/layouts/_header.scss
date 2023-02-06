@@ -1,18 +1,29 @@
+@use '../abstracts/breakpoints' as brk;
+
 .header {
-  --padd-block: 2em;
+  --padd-block: 2.5em;
   padding-top: var(--padd-block);
   padding-bottom: var(--padd-block);
 
+  @include brk.minWidth(medium) {
+    --padd-block: 4em;
+  }
+
   &__logo {
-    width: clamp(2rem, 12vw, 5rem);
+    width: clamp(2rem, 12vw, 4.5rem);
   }
 
   &__nav {
-    display: none;
+    @include brk.maxWidth(medium) {
+      display: none;
+    }
   }
 
   &__nav-links {
+    font-size: 1.1em;
     list-style: none;
+    display: flex;
+    gap: 2.5rem;
 
     a {
       color: inherit; // inherits from body font color
@@ -28,5 +39,11 @@
       outline: 1px solid currentColor;
       outline-offset: 0.25em;
     }
+  }
+}
+
+.header .btn__hamburger {
+  @include brk.minWidth(medium) {
+    display: none;
   }
 }

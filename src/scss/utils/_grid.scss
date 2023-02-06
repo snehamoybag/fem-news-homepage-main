@@ -3,17 +3,16 @@
 .grid {
   display: grid;
 
+  @include brk.minWidth(medium) {
+    --double-col: repeat(2, 1fr);
+    --triple-col: repeat(3, 1fr);
+  }
+
   &--double-col {
-    @include brk.minWidth(medium) {
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: auto;
-    }
+    grid-template-columns: var(--double-col);
   }
 
   &--triple-col {
-    @include brk.minWidth(medium) {
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: auto;
-    }
+    grid-template-columns: var(--triple-col);
   }
 }

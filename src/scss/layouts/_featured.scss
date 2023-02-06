@@ -1,16 +1,28 @@
 @use '../abstracts/breakpoints' as brk;
 
 .featured {
-  --content-spacing: 1rem;
+  @include brk.maxWidth(medium) {
+    --img-margin-bottom: 1.25rem;
+    --title-margin-bottom: 1rem;
+    --desc-margin-bottom: 1.5rem;
+  }
 
   @include brk.minWidth(medium) {
     --img-col-span: span 2;
+    --article-col-gap: 3.25rem;
+    --article-row-gap: 2rem;
+    --desc-margin-bottom: 2.35rem;
     grid-column: span 2;
     grid-row: span 2;
   }
 
+  &__article {
+    grid-column-gap: var(--article-col-gap);
+    grid-row-gap: var(--article-row-gap);
+  }
+
   &__cover-img {
-    margin-bottom: var(--content-spacing);
+    margin-bottom: var(--img-margin-bottom);
     grid-column: var(--img-col-span);
 
     & > * {
@@ -25,16 +37,18 @@
     font-weight: var(--fw-extra-bold);
     color: var(--clr-neutral-900);
     line-height: 1;
-    margin-bottom: var(--content-spacing);
+    margin-bottom: var(--title-margin-bottom);
+    align-self: center;
   }
 
-  &__description-wrapper {}
-
   &__description {
-    margin-bottom: calc(var(--content-spacing) + 0.5rem);
+    margin-bottom: var(--desc-margin-bottom);
   }
 
   .btn {
     display: inline-block;
+    position: relative;
+    bottom: 0;
+    left: 0;
   }
 }

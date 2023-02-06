@@ -1,3 +1,11 @@
+@use '../abstracts/breakpoints.scss' as brk;
+
 .container {
   padding: 0 1rem;
+  max-width: 70rem;
+  margin: 0 auto;
+
+  @include brk.maxWidth(medium) {
+    max-width: 30rem;
+  }
 }
