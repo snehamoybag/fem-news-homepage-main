@@ -1,8 +1,15 @@
-.main {
-  --content-spacing: 4rem;
-  margin-bottom: var(--content-spacing);
+@use '../abstracts/breakpoints' as brk;
 
-  & > .grid {
-    gap: var(--content-spacing);
+.main {
+  --row-spacing: 4rem;
+  --col-spacing: 2.5rem;
+  margin-bottom: var(--row-spacing);
+}
+
+.main > .grid {
+  grid-row-gap: var(--row-spacing);
+
+  @include brk.minWidth(medium) {
+    grid-column-gap: var(--col-spacing);
   }
 }

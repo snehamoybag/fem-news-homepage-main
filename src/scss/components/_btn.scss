@@ -4,8 +4,8 @@
     background-color: transparent;
     border: none;
     position: relative;
-    width: 2.25em;
-    height: 1em;
+    width: clamp(1.5rem, 10vw, 3.5rem);
+    height: clamp(1rem, 5vw, 2rem);
     padding: 0;
 
     &-lines {
@@ -15,7 +15,7 @@
     &-lines,
     &-lines::before,
     &-lines::after {
-      height: 0.175em;
+      height: 0.2em;
       background-color: var(--clr-neutral-900);
     }
 

@@ -1,3 +1,19 @@
+@use '../abstracts/breakpoints' as brk;
+
 .grid {
   display: grid;
+
+  &--double-col {
+    @include brk.minWidth(medium) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto;
+    }
+  }
+
+  &--triple-col {
+    @include brk.minWidth(medium) {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: auto;
+    }
+  }
 }

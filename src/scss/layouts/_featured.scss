@@ -1,8 +1,23 @@
+@use '../abstracts/breakpoints' as brk;
+
 .featured {
   --content-spacing: 1rem;
 
+  @include brk.minWidth(medium) {
+    --img-col-span: span 2;
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+
   &__cover-img {
     margin-bottom: var(--content-spacing);
+    grid-column: var(--img-col-span);
+
+    & > * {
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
   }
 
   &__title {
@@ -12,6 +27,8 @@
     line-height: 1;
     margin-bottom: var(--content-spacing);
   }
+
+  &__description-wrapper {}
 
   &__description {
     margin-bottom: calc(var(--content-spacing) + 0.5rem);

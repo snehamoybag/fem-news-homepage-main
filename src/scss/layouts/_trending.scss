@@ -1,6 +1,13 @@
+@use '../abstracts/breakpoints' as brk;
+
 .trending {
   --list-gap: 2rem;
   --thumbnail-text-gap: 1.5rem;
+
+  @include brk.minWidth(medium) {
+    grid-column: span 3;
+  }
+
   &__list {
     padding: 0;
     list-style: none;
@@ -8,13 +15,14 @@
 
     article {
       display: flex;
-      align-items: center;
       gap: var(--thumbnail-text-gap);
     }
   }
 
   &__list-thumbnail {
-    width: 6rem;
+    max-width: 6rem;
+    aspect-ratio: 3/4;
+    object-fit: cover;
   }
 
   &__list-title {
