@@ -1,7 +1,8 @@
 @use '../abstracts/breakpoints.scss' as brk;
 
 .container {
-  padding: 0 1rem;
+  --container-padd-inline: 1rem;
+  padding: 0 var(--container-padd-inline);
   max-width: 70rem;
   margin: 0 auto;
 

@@ -43,6 +43,7 @@
   }
 
   &__num {
+
     &::before {
       display: block;
       font-size: var(--fs-700);
@@ -50,12 +51,15 @@
       color: var(--clr-neutral-300);
       margin-bottom: 0.25rem;
     }
+
     &--1::before {
       content: '01';
     }
+
     &--2::before {
       content: '02';
     }
+
     &--3::before {
       content: '03';
     }

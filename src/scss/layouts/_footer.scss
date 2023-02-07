@@ -1,3 +1,5 @@
+@use '../abstracts/breakpoints.scss' as brk;
+
 .footer {
 
   &__attribution {
@@ -27,5 +29,11 @@
       display: block;
       margin-bottom: 0.5rem;
     }
+  }
+}
+
+.footer .container {
+  @include brk.maxWidth(medium) {
+    max-width: unset;
   }
 }

@@ -1,0 +1,15 @@
+.open-nav {
+
+  &.btn__hamburger {
+    background-image: url('/assets/images/icon-menu-close.svg');
+    transform: rotate(90deg) scale(1.5);
+    position: fixed;
+    right: var(--container-padd-inline);
+    top: var(--header-padd-block);
+    z-index: 2;
+  }
+
+  &.header__nav {
+    display: block;
+  }
+}

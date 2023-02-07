@@ -1,40 +1,16 @@
 .btn {
 
   &__hamburger {
-    background-color: transparent;
-    border: none;
-    position: relative;
     width: clamp(1.5rem, 10vw, 3.5rem);
     height: clamp(1rem, 5vw, 2rem);
     padding: 0;
-
-    &-lines {
-      display: block;
-    }
-
-    &-lines,
-    &-lines::before,
-    &-lines::after {
-      height: 0.2em;
-      background-color: var(--clr-neutral-900);
-    }
-
-    &-lines::before,
-    &-lines::after {
-      content: '';
-      width: 100%;
-      position: absolute;
-      left: 0;
-      z-index: 99;
-    }
-
-    &-lines::before {
-      top: 0;
-    }
-
-    &-lines::after {
-      bottom: 0;
-    }
+    border: none;
+    background-color: transparent;
+    background-image: url('/assets/images/icon-menu.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    transition: transform 200ms linear;
   }
 
   &__read-more {
