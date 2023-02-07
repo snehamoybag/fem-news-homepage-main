@@ -20,9 +20,9 @@
   }
 
   &__list-thumbnail {
-    max-width: 6rem;
-    aspect-ratio: 3/4;
+    max-width: 6.5rem;
     object-fit: cover;
+    object-position: center;
   }
 
   &__list-title {

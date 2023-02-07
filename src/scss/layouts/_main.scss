@@ -5,11 +5,18 @@
   margin-bottom: var(--row-spacing);
   @include brk.minWidth(medium) {
     --col-spacing: 2rem;
-    --row-spacing: 4.5rem;
+    --row-spacing: 5rem;
   }
 }
 
 .main > .grid {
   grid-row-gap: var(--row-spacing);
   grid-column-gap: var(--col-spacing);
+}
+
+.main section:target {
+  @include brk.minWidth(medium) {
+    padding: 1em;
+    border: 5px dotted var(--clr-primary-400);
+  }
 }

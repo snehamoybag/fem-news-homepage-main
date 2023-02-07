@@ -71,6 +71,7 @@
 }
 
 .header .btn__hamburger {
+
   @include brk.minWidth(medium) {
     display: none;
   }
